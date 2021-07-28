@@ -1,11 +1,10 @@
 import './App.css';
-import ReactTostyfi from './Components/Tostyfi/ReactTostyfi';
-
+import ReactModel from './Components/Model/ReactModel';
 
 function App() {
   return (
     <div className="App">
-      <ReactTostyfi />
+      <ReactModel />
     </div>
   );
 }
