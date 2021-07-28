@@ -1,10 +1,12 @@
 import "./App.css";
-import ToolTip from "./Components/Tippy.js/ToolTip";
+import CountUp from "./Components/Countup/CountUp";
+// import CountUp from 'react-countup';
 
 function App() {
   return (
     <div className="App">
-      <ToolTip />
+      <CountUp />
+    {/* <CountUp end={200} /> */}
     </div>
   );
 }

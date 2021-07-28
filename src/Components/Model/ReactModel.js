@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 
-Modal.setAppElement('#root')
+Modal.setAppElement("#root");
 const ReactModel = () => {
   const [modalIsOpen, setmodalIsOpen] = useState(false);
   return (
@@ -12,13 +12,13 @@ const ReactModel = () => {
         shouldCloseOnOverlayClick={false}
         onRequestClose={() => setmodalIsOpen(false)}
         style={{
-            overlay: {
-                backgroundColor: 'gray'
-            },
-            content: {
-                color: 'red',
-                backgroundColor: '#f0f0f0'
-            }
+          overlay: {
+            backgroundColor: "gray",
+          },
+          content: {
+            color: "red",
+            backgroundColor: "#f0f0f0",
+          },
         }}
       >
         <h2>Model Title</h2>
