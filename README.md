@@ -1,70 +1,222 @@
-# Getting Started with Create React App
+# Practical React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project, I'm going to learn and explore some of the use full react packages that help me to create efficient and optimized UI/UX.
 
-## Available Scripts
+## React Icons
 
-In the project directory, you can run:
+React Icons include popular icons in our React projects easily with react-icons, which utilizes ES6 imports that allows us to include only the icons that our project is using.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn add react-icons
+# or
+npm install react-icons --save
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Example usage
 
-### `npm test`
+```jsx
+import { FaBeer } from "react-icons/fa";
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+class Question extends React.Component {
+  render() {
+    return (
+      <h3>
+        {" "}
+        Lets go for a <FaBeer />?{" "}
+      </h3>
+    );
+  }
+}
+```
 
-### `npm run build`
+## Authors
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [@react-icons - github](https://github.com/react-icons)
+- [React Icons - github repo](https://github.com/react-icons/react-icons)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#
 
-### `npm run eject`
+## React Toastify
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React-Toastify allows you to add notifications to your app with ease. No more nonsense!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+yarn add react-toastify
+# or
+npm install --save react-toastify
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Example usage
 
-## Learn More
+```jsx
+import React from "react";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+function App() {
+  const notify = () => toast("Wow so easy!");
 
-### Code Splitting
+  return (
+    <div>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer />
+    </div>
+  );
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+- [@Fadi Khadra - github](https://github.com/fkhadra)
+- [React Toastify - github repo](https://github.com/fkhadra/react-toastify)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#
 
-### Making a Progressive Web App
+#
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## React Modal
 
-### Advanced Configuration
+Accessible modal dialog component for React.JS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Installation
 
-### Deployment
+```bash
+yarn add react-modal
+# or
+npm install --save react-modal
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Example usage
 
-### `npm run build` fails to minify
+```jsx
+import React, { useState } from "react";
+import Modal from "react-modal";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Modal.setAppElement("#root");
+const ReactModel = () => {
+  const [modalIsOpen, setmodalIsOpen] = useState(false);
+  return (
+    <div>
+      <button onClick={() => setmodalIsOpen(true)}>Open Modal</button>
+      <Modal
+        isOpen={modalIsOpen}
+        shouldCloseOnOverlayClick={false}
+        onRequestClose={() => setmodalIsOpen(false)}
+        style={{
+          overlay: {
+            backgroundColor: "gray",
+          },
+          content: {
+            color: "red",
+            backgroundColor: "#f0f0f0",
+          },
+        }}
+      >
+        <h2>Model Title</h2>
+        <p>Model body</p>
+        <div>
+          <button onClick={() => setmodalIsOpen(false)}>Close</button>
+        </div>
+      </Modal>
+    </div>
+  );
+};
+
+export default ReactModel;
+```
+
+## Authors
+
+- [@React Community - github](https://github.com/reactjs)
+- [React Modal - github repo](https://github.com/reactjs/react-modal)
+
+#
+
+#
+
+## Tippy.js for React
+
+Tippy.js is the complete tooltip, popover, dropdown, and menu solution for the web, powered by Popper.
+
+Tippy is an abstraction over Popper that provides common logic involved in all types of elements that pop out on top of the UI, positioned next to a target or reference element. This is a React wrapper for the core library, providing full integration including headless rendering abilities.
+
+## Installation
+
+```bash
+npm i @tippyjs/react
+# or
+yarn add @tippyjs/react
+
+```
+
+#### Example usage
+
+```jsx
+import React from "react";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css"; // optional
+
+const StringContent = () => (
+  <Tippy content="Hello">
+    <button>My button</button>
+  </Tippy>
+);
+
+const JSXContent = () => (
+  <Tippy content={<span>Tooltip</span>}>
+    <button>My button</button>
+  </Tippy>
+);
+```
+
+## Authors
+
+- [@James N - github](https://github.com/atomiks)
+- [Tippy.js for React - github repo](https://github.com/atomiks/tippyjs-react)
+
+#
+
+#
+
+## React CountUp
+
+A configurable React component wrapper around CountUp.js.
+
+## Installation
+
+```bash
+yarn add react-countup
+# or
+npm i react-countup
+
+```
+
+#### Example usage
+
+```jsx
+import React from "react";
+import CountUp, { useCountUp } from "react-countup";
+
+const ReactCountup = () => {
+  return (
+    <div>
+      <h1>
+        <CountUp end={200} duration={2} />
+      </h1>
+  );
+};
+
+export default ReactCountup;
+```
+
+## Authors
+
+- [@Glenn Reyes - github](https://github.com/glennreyes)
+- [Tippy.js for React - github repo](https://github.com/glennreyes/react-countup)
