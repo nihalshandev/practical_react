@@ -1,10 +1,10 @@
-import './App.css';
-import ReactModel from './Components/Model/ReactModel';
+import "./App.css";
+import ToolTip from "./Components/Tippy.js/ToolTip";
 
 function App() {
   return (
     <div className="App">
-      <ReactModel />
+      <ToolTip />
     </div>
   );
 }
