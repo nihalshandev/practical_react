@@ -1,10 +1,10 @@
 import "./App.css";
-import CreditCard from "./Components/CreditCard/CreditCard";
+import DatePicker from "./Components/DatePicker/DatePicker";
 
 function App() {
   return (
     <div className="App">
-      <CreditCard />
+      <DatePicker/>
     </div>
   );
 }
