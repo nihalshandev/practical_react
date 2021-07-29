@@ -1,12 +1,10 @@
 import "./App.css";
-import CountUp from "./Components/Countup/CountUp";
-// import CountUp from 'react-countup';
+import IdleTimerContainer from "./Components/IdleTimer/IdleTimerContainer";
 
 function App() {
   return (
     <div className="App">
-      <CountUp />
-    {/* <CountUp end={200} /> */}
+      <IdleTimerContainer />
     </div>
   );
 }
