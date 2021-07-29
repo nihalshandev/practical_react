@@ -1,10 +1,10 @@
 import "./App.css";
-import ColorPicker from "./Components/ColorPicker/ColorPicker";
+import CreditCard from "./Components/CreditCard/CreditCard";
 
 function App() {
   return (
     <div className="App">
-      <ColorPicker />
+      <CreditCard />
     </div>
   );
 }
