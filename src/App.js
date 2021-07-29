@@ -1,10 +1,10 @@
 import "./App.css";
-import IdleTimerContainer from "./Components/IdleTimer/IdleTimerContainer";
+import ColorPicker from "./Components/ColorPicker/ColorPicker";
 
 function App() {
   return (
     <div className="App">
-      <IdleTimerContainer />
+      <ColorPicker />
     </div>
   );
 }
