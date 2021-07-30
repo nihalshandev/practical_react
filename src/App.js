@@ -1,10 +1,10 @@
 import "./App.css";
-import DatePicker from "./Components/DatePicker/DatePicker";
+import ReactPlayer from "./Components/VideoPlayer/ReactPlayer";
 
 function App() {
   return (
     <div className="App">
-      <DatePicker/>
+      <ReactPlayer />
     </div>
   );
 }
